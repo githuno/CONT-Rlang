@@ -1,0 +1,22 @@
+version: '3'
+services:
+  rstudio:
+    build: .
+    container_name: rstudio
+    ports:
+      - 8787:8787
+    environment:
+      PASSWORD: rs8787
+      TZ: Asia/Tokyo
+    volumes:
+      - ./R:/home/rstudio
+    tty: true
+    stdin_open: true
+
+
+# ----------起動方法-----------------------------
+# docker-compose up -d
+# または          
+# docker-compose up --build
+# http://127.0.0.1:8787/
+# ユーザー：rstudio　パスワード：rs8787 でログイン
