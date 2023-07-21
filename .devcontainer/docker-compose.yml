@@ -1,3 +1,4 @@
+name: "rstudio"
 version: '3'
 services:
   rstudio:
